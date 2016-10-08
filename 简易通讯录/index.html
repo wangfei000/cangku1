@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.wrap {
+			width: 640px;
+			height: 1156px;
+			border: 1px solid black;
+			overflow: scroll;
+		}
+		.wrap div {
+			height: 50px;
+			background-color: #eee;
+			border-bottom: 1px solid #aaa;
+		}
+		.wrap div:last-child{
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<!-- <div>
+			<p class="p1">fangfang</p>
+			<p class="p2">110</p>
+		</div> -->
+	</div>
+</body>
+<script src="model.js"></script>
+<script src="view.js"></script>
+<script type="text/javascript">
+	//创建伪数据
+	var infoArr = [{
+		user:"fangfang",
+		phone: "13110120119"
+	},
+	{
+		user:"kangkang",
+		phone: "6666666"
+	},{
+		user:"banzhang",
+		phone: "55555555"
+	},{
+		user:"naiwen",
+		phone: "00000000"
+	},{
+		user:"jianjian",
+		phone: "1234567890"
+	},{
+		user:"malao",
+		phone: "88888888"
+	}];
+
+	var dw = document.querySelector(".wrap");
+
+	// 1. 封装数据 model
+
+	// 2. 封装 view
+
+	// 对这个程序来说就是创建div
+
+	for (var i = 0; i < infoArr.length; i++) {
+
+		var model = new Model(infoArr[i]);
+
+		var d = createCell();
+		d.setCellWithModel(model);
+		dw.appendChild(d);
+	}
+
+
+
+
+
+	//***********  以下是常规思维写出来的
+
+
+	// for(var i = 0; i<infoArr.length; i++) {
+	// 	var d = document.createElement("div");
+	// 	d.innerHTML = "<p class='p1'></p><p class='p2'></p>";
+	// 	var p1 = d.querySelector(".p1");
+	// 	var p2 = d.querySelector(".p2");
+
+	// 	var mo = infoArr[i];
+
+	// 	p1.innerHTML = mo.name;
+	// 	p2.innerHTML = mo.phone;
+
+	// 	dw.appendChild(d);
+	// }
+</script>
+</html>
+
+
+
+
+
