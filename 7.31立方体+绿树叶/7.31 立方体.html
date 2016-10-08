@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	   div{
+         width: 200px;
+         height: 200px;
+         position: absolute;
+         text-align: center;
+         line-height: 200px;
+	    }
+	    .a{
+	    	position: relative;
+	    	padding: 200px;
+	    	transition:5s;
+	    	-webkit-transform-style:preserve-3d;
+	    	-ms-transform-style:preserve-3d;
+	    	-o-transform-style:preserve-3d;
+	    	transform-style:preserve-3d;
+	    }
+	    .a:hover{
+	    	transform:rotateX(360deg) rotateY(720deg);
+	    }
+	    .a1{
+	    	background-color: blue;
+	    	transform:translateZ(100px);
+	    }
+	     .a2{
+	    	background-color: yellow;
+	    	transform:rotateY(90deg) translateZ(100px);
+	    }
+	     .a3{
+	    	background-color: red;
+	    	transform:rotateX(90deg) translateZ(100px);
+	    }
+	     .a4{
+	    	background-color: brown;
+	    	transform:rotateY(270deg) translateZ(100px);
+	    }
+	     .a5{
+	    	background-color: cyan;
+	    	transform:rotateX(270deg) translateZ(100px);
+	    }
+	    .a6{
+	    	background-color: white;
+	    	transform:rotateY(180deg) translateZ(100px);
+	    }
+	</style>
+	
+</head>
+<body>
+    <div class="a">
+    	<div class="a1">1</div>
+    	<div class="a2">2</div>
+    	<div class="a3">3</div>
+    	<div class="a4">4</div>
+    	<div class="a5">5</div>
+    	<div class="a6">6</div>
+    </div>
+	
+</body>
+</html>
